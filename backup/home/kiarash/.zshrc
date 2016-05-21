@@ -10,7 +10,17 @@ antigen use oh-my-zsh
 
 # Load selected bundles
 antigen bundle git
+antigen bundle vi-mode
 antigen bundle virtualenv
+
+# External bundles
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundle zsh-users/zsh-history-substring-search
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
+antigen bundle zsh-users/zsh-autosuggestions
 
 # bullet-train theme
 antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
@@ -20,6 +30,9 @@ antigen apply
 
 # Include ruby gems in path
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+
+# rupa/z
+source /usr/lib/z.sh
 
 # User ssh-agent service
 export SSH_AUTH_SOCK="/tmp/kiarash/ssh-agent.socket"

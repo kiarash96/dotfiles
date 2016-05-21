@@ -175,5 +175,6 @@ xorg-xinit
 xorg-xrandr
 xpad
 xterm
+z-git
 zsh
 zsh-completions
