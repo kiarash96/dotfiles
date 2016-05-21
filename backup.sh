@@ -73,7 +73,11 @@ if [ $choice == "y" ]; then
     git push origin master
     echo "done."
 else
-    git reset --hard &> $DEBUG
+    git reset HEAD &> $DEBUG
+    git clean -fd &> $DEBUG
+    git add $LIST_FILE &> $DEBUG
+    git checkout . &> $DEBUG
+    git reset $LIST_FILE &> $DEBUG
 fi
 
 
