@@ -2,6 +2,7 @@ abs
 adwaita-icon-theme
 android-tools
 android-udev
+antigen-git
 aria2
 autoconf
 automake
@@ -150,6 +151,7 @@ thunderbird
 tigervnc
 tmux
 tomcat7
+ttf-ancient-fonts
 ttf-arabeyes-fonts
 ttf-droid
 ttf-ms-fonts
@@ -173,3 +175,5 @@ xorg-xinit
 xorg-xrandr
 xpad
 xterm
+zsh
+zsh-completions

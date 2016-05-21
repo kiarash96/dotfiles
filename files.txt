@@ -14,6 +14,6 @@
 ~/.tmux.conf
 ~/.vimrc
 ~/.gitconfig
-~/.bashrc
+~/.zshrc
 ~/.config/user-dirs.dirs
 
