@@ -53,31 +53,30 @@ done < "$TMP_DIR/$LIST_FILE.tmp"
 rm $"$TMP_DIR/$LIST_FILE.tmp"
 echo "done."
 
-git add .
-git status
-
 while : ; do
-    read -p "commit and push? (y/n/d) " -n 1 choice
+    git status
+    read -p "Commit and push? (y/a/d/q) " -n 1 choice
     echo
     
-    if [ $choice == "d" ]; then
+    if [ $choice == "a" ]; then
+        git add -i
+    elif [ $choice == "d" ]; then
         git diff --staged
+    elif [ $choice == "y" ]; then
+        git commit
+        echo "pushing..."
+        git push origin master
+        echo "done."
+        break
     else
+        echo "Reseting to original state..."
         break
     fi
 done
 
-if [ $choice == "y" ]; then
-    git commit
-    echo "pushing..."
-    git push origin master
-    echo "done."
-else
-    git reset HEAD &> $DEBUG
-    git clean -fd &> $DEBUG
-    git add $LIST_FILE &> $DEBUG
-    git checkout . &> $DEBUG
-    git reset $LIST_FILE &> $DEBUG
-fi
-
+git reset HEAD &> $DEBUG
+git clean -fd &> $DEBUG
+git add $LIST_FILE &> $DEBUG
+git checkout . &> $DEBUG
+git reset $LIST_FILE &> $DEBUG
 
