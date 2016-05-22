@@ -165,6 +165,7 @@ vim-jellybeans
 vim-octave
 which
 wpa_supplicant
+xclip
 xdelta3
 xdg-user-dirs
 xf86-input-synaptics
