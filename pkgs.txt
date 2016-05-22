@@ -150,6 +150,7 @@ texlive-latexextra
 thunderbird
 tigervnc
 tmux
+tmux-tpm-git
 tomcat7
 ttf-ancient-fonts
 ttf-arabeyes-fonts
