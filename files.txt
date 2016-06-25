@@ -12,7 +12,7 @@
 ~/.xprofile
 
 ~/.tmux.conf
-~/.vimrc
+~/.config/nvim/init.vim
 ~/.gitconfig
 ~/.zshrc
 ~/.config/user-dirs.dirs
