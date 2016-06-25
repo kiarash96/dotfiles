@@ -21,6 +21,7 @@ nnoremap <down> gj
 call plug#begin('~/.cache/nvim/plugged')
 
 " Plugins
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
