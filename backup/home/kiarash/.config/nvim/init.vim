@@ -17,23 +17,46 @@ nnoremap j gj
 nnoremap <up> gk
 nnoremap <down> gj
 
+" Set leader
+let mapleader = "\\"
+
 " Start vim-plug
 call plug#begin('~/.cache/nvim/plugged')
 
 " Plugins
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-airline/vim-airline'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
-Plug 'vim-scripts/paredit.vim'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+
+" vim-tmux-navigator neovim fix for ctrl+h
+nnoremap <silent> <c-a> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
+
 
 Plug 'ctrlpvim/ctrlp.vim'
 " Ignore files in gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Clojure
+
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+"Plug 'tpope/vim-salve'
+Plug 'tpope/vim-fireplace', { 'tag' : '*' }
+Plug 'guns/vim-clojure-highlight'
+
+Plug 'kien/rainbow_parentheses.vim'
+au BufEnter *.clj RainbowParenthesesToggle
+au Syntax clojure RainbowParenthesesLoadRound
+au Syntax clojure RainbowParenthesesLoadSquare
+au Syntax clojure RainbowParenthesesLoadBraces
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -75,6 +98,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " Different file types local settings
-autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
