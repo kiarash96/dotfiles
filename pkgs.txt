@@ -101,6 +101,7 @@ licenses
 links
 linux
 logrotate
+lsof
 lvm2
 m4
 make
