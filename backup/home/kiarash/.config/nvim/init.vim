@@ -66,23 +66,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 Plug 'jvirtanen/vim-octave'
 Plug 'lepture/vim-jinja'
 
-" Code completion
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim'
-let g:deoplete#enable_at_startup = 1
-set completeopt-=preview
-
-" Use Ctrl+Space for moving in menu
-inoremap <silent><expr> <C-Space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
-imap <C-@> <C-Space>
-
-" Completion engines
-Plug 'zchee/deoplete-jedi'
-
-"Plug 'artur-shaik/vim-javacomplete2'
-
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
