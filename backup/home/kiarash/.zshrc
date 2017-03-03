@@ -10,7 +10,7 @@ antigen use oh-my-zsh
 
 # Load selected bundles
 antigen bundle git
-antigen bundle vi-mode
+#antigen bundle vi-mode
 antigen bundle virtualenv
 
 # External bundles
@@ -18,8 +18,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen bundle zsh-users/zsh-history-substring-search
 # vim mode keys
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+#bindkey -M vicmd 'k' history-substring-search-up
+#bindkey -M vicmd 'j' history-substring-search-down
 # normal mode keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -40,6 +40,9 @@ antigen apply
 # Include ruby gems in path
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
+# Make bundler install gems per user by default
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+
 # rupa/z
 _Z_CMD=j
 source /usr/lib/z.sh
@@ -48,10 +51,9 @@ source /usr/lib/z.sh
 export SSH_AUTH_SOCK="/tmp/kiarash/ssh-agent.socket"
 
 # Set default text editor
-export VISUAL=nvim
-export EDITOR=nvim
-
-alias vim=nvim
+export VISUAL=vim
+export EDITOR=vim
+export DIFFPROG=vim
 
 # History settings
 HISTFILE="$HOME/.zhistory"
@@ -60,7 +62,7 @@ SAVEHIST=10000000
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+#setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.

@@ -11,6 +11,7 @@
 
 ~/.xprofile
 
+~/.editorconfig
 ~/.tmux.conf
 ~/.config/nvim/init.vim
 ~/.gitconfig

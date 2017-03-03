@@ -3,8 +3,9 @@ set number relativenumber
 set cursorline
 
 set hidden " Enable switching buffers when there are unsaved changes
+set splitright splitbelow
 
-set clipboard+=unnamedplus " Sync X clipboard with unnamed register
+"set clipboard+=unnamedplus " Sync X clipboard with unnamed register
 
 set undofile
 set backupdir=/tmp/kiarash/.nvim/backup/
@@ -66,6 +67,23 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 Plug 'jvirtanen/vim-octave'
 Plug 'lepture/vim-jinja'
 
+" Code completion
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim'
+let g:deoplete#enable_at_startup = 1
+set completeopt-=preview
+
+" Use Ctrl+Space for moving in menu
+inoremap <silent><expr> <C-Space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
+imap <C-@> <C-Space>
+
+" Completion engines
+Plug 'zchee/deoplete-jedi'
+
+"Plug 'artur-shaik/vim-javacomplete2'
+
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline-themes'
@@ -81,6 +99,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " Different file types local settings
-autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php,*.css,*.scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+:set virtualedit=all

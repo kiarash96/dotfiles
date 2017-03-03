@@ -52,6 +52,7 @@ done < "$TMP_DIR/$LIST_FILE.tmp"
 
 rm $"$TMP_DIR/$LIST_FILE.tmp"
 echo "done."
+exit
 
 while : ; do
     git status
