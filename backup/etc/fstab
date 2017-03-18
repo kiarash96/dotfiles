@@ -1,0 +1,8 @@
+# /dev/sda3
+UUID=bbbebf5d-2994-4a1d-85ce-125175300f12	/         	ext4      	rw,relatime,data=ordered,discard	0 1
+
+# /dev/sda1
+UUID=7B93-29F7      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro,discard	0 2
+
+# /dev/sda4
+UUID=5b77ba21-c781-47c3-8bc2-c9a9ea099f2c	/home     	ext4      	rw,relatime,data=ordered,discard	0 2

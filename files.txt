@@ -1,3 +1,4 @@
+/etc/fstab
 /etc/vconsole.conf
 /etc/makepkg.conf
 /etc/pacman.conf
