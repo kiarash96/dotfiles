@@ -44,6 +44,7 @@ flashplugin
 fuseiso
 gawk
 gcc-multilib
+gdb
 gdm
 gettext
 glibc
@@ -162,6 +163,7 @@ sysfsutils
 systemd-sysvcompat
 tar
 task
+tcpdump
 telegram-desktop-bin
 terminus-font
 texinfo
@@ -173,6 +175,7 @@ texlive-science
 thunderbird
 tmux
 tmux-tpm-git
+traceroute
 ttf-ancient-fonts
 ttf-arabeyes-fonts
 ttf-droid
@@ -185,8 +188,10 @@ vi
 vim-plug
 wget
 which
+whois
+wireshark-cli
+wireshark-gtk
 wpa_supplicant
-wps-office
 xclip
 xdelta3
 xdg-user-dirs

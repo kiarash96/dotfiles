@@ -35,11 +35,14 @@ Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'qpkorr/vim-bufkill'
 
 " vim-tmux-navigator neovim fix for ctrl+h
 nnoremap <silent> <c-a> :TmuxNavigatePrevious<cr>
 nnoremap <silent> <BS> :TmuxNavigateLeft<cr>
 
+" vim-bufkill
+cabbrev bd <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'BD' : 'bdelete')<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
 " Ignore files in gitignore
