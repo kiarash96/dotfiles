@@ -1,8 +1,9 @@
-# /dev/sda3
-UUID=bbbebf5d-2994-4a1d-85ce-125175300f12	/         	ext4      	rw,relatime,data=ordered,discard	0 1
-
-# /dev/sda1
-UUID=7B93-29F7      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro,discard	0 2
-
-# /dev/sda4
-UUID=5b77ba21-c781-47c3-8bc2-c9a9ea099f2c	/home     	ext4      	rw,relatime,data=ordered,discard	0 2
+#
+# See fstab(5).
+#
+# <file system>					<dir>	<type>	<options>		<dump>	<pass>
+UUID=a7ad79cd-b931-4020-8dd4-8bbe400e0355	/	ext4	rw,noatime,discard	0	1
+UUID=FB7F-153F					/boot	vfat	rw,noatime,discard	0	2
+UUID=3255ba30-34b0-4766-a8d7-e775bf1ec6bd	/home	ext4	rw,noatime,discard	0	2
+tmpfs						/tmp	tmpfs	defaults,nosuid,nodev   0       0
+UUID=b754b1d3-0e55-4380-b5e6-6f5161e8f713	swap	swap	defaults,discard	0	0

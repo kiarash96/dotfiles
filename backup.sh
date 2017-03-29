@@ -13,7 +13,7 @@ TMP_DIR="/tmp/"
 BACKUP_DIR="backup/"
 
 # Backup $1 which is a file.
-function backfile() {
+backfile() {
     echo "Backing up $1"
     dir=$(dirname $1)
     name=$(basename $1)
@@ -26,7 +26,7 @@ rm -rf $BACKUP_DIR
 mkdir -p $BACKUP_DIR
 
 echo "Listing installed packages..."
-pacman -Qeq > $PKGS_FILE
+xbps-query -m > $PKGS_FILE
 echo "done."
 
 
@@ -41,7 +41,7 @@ do
     if [ ! -z "$line" ]; then
         list=$(find "$line" -type f 2> $DEBUG)
         if [ -z "$list" ]; then
-            echo -e "\033[1;31m$line was not found!\033[0m"
+            echo "\033[1;31m$line was not found!\033[0m"
         fi
         for file in $list
         do
@@ -50,7 +50,7 @@ do
     fi
 done < "$TMP_DIR/$LIST_FILE.tmp"
 
-rm $"$TMP_DIR/$LIST_FILE.tmp"
+rm "$TMP_DIR/$LIST_FILE.tmp"
 echo "done."
 exit
 

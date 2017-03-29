@@ -1,21 +1,9 @@
 /etc/fstab
-/etc/vconsole.conf
-/etc/makepkg.conf
-/etc/pacman.conf
+/etc/rc.conf
+/etc/xbps.d/
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
 
-/usr/local/etc/
-/usr/local/bin/
-
-~/.config/systemd/user/ssh-agent.service
-
-~/.xprofile
-
 ~/.editorconfig
-~/.tmux.conf
-~/.config/nvim/init.vim
 ~/.gitconfig
-~/.zshrc
 ~/.config/user-dirs.dirs
-

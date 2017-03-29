@@ -1,6 +1,0 @@
-#
-# executed on x init
-#
-
-xrandr --dpi 115
-
