@@ -4,6 +4,6 @@
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
 
-~/.editorconfig
-~/.gitconfig
-~/.config/user-dirs.dirs
+/home/kiarash/.editorconfig
+/home/kiarash/.gitconfig
+/home/kiarash/.config/user-dirs.dirs
