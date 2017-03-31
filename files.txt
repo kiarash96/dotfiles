@@ -13,3 +13,4 @@
 /home/kiarash/.editorconfig
 /home/kiarash/.gitconfig
 /home/kiarash/.config/user-dirs.dirs
+/home/kiarash/.config/i3/config
