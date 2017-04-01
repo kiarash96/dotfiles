@@ -9,9 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# set desktop wallpaper
-exec --no-startup-id feh --no-fehbg --bg-center ~/doc/wallpaper/wallpaper-abstract-hd-9.jpg
-
+# modifier keys
 set $mod Mod4
 set $alt Mod1
 
@@ -25,14 +23,17 @@ workspace_auto_back_and_forth yes
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-new_window none
+# borders
+new_window pixel 1
 new_float normal
 
+# don't hide borders on edge of screen
 hide_edge_borders none
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# launch apps
 set $mode_launch Launch: [f]irefox 
 bindsym $mod+o mode "$mode_launch"
 mode "$mode_launch" {
@@ -72,6 +73,18 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# resize window
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
+
+# same bindings, but for the arrow keys
+bindsym $mod+Ctrl+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+Right resize grow width 10 px or 10 ppt
+
 # split in horizontal orientation
 bindsym $mod+backslash split h
 
@@ -80,9 +93,6 @@ bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# take a screenshot
-bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -130,20 +140,10 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i4-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
-bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
-bindsym $mod+Ctrl+j resize grow height 10 px or 10 ppt
-bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
-bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
-
-# same bindings, but for the arrow keys
-bindsym $mod+Ctrl+Left resize shrink width 10 px or 10 ppt
-bindsym $mod+Ctrl+Down resize grow height 10 px or 10 ppt
-bindsym $mod+Ctrl+Up resize shrink height 10 px or 10 ppt
-bindsym $mod+Ctrl+Right resize grow width 10 px or 10 ppt
-
+# take a screenshot
+bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -157,6 +157,17 @@ bar {
 	#xmodmap -e 'keysym Menu = Hyper_L'
 }
 
-# for i3-gaps
-gaps inner 10
-gaps outer 5
+# i3-gaps
+
+gaps inner 8
+gaps outer 2
+
+# show borders only when there is more than one container
+smart_borders on
+
+# startup scripts
+
+# set desktop wallpaper
+exec --no-startup-id feh --no-fehbg --bg-center ~/doc/wallpaper/wallpaper-abstract-hd-9.jpg
+
+
