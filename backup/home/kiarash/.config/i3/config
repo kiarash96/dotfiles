@@ -31,7 +31,7 @@ new_float normal
 hide_edge_borders none
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # launch apps
 set $mode_launch Launch: [f]irefox 
@@ -163,11 +163,12 @@ gaps inner 8
 gaps outer 2
 
 # show borders only when there is more than one container
-smart_borders on
+#smart_borders on
 
 # startup scripts
 
 # set desktop wallpaper
 exec --no-startup-id feh --no-fehbg --bg-center ~/doc/wallpaper/wallpaper-abstract-hd-9.jpg
 
-
+# compositor
+#exec --no-startup-id compton --config ~/.config/compton.conf

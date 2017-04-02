@@ -1,6 +1,7 @@
 adwaita-icon-theme-3.22.0_3
 alsa-utils-1.1.3_1
 aria2-1.31.0_1
+base-devel-20161126_1
 base-system-0.112_2
 bash-completion-2.5_1
 ccache-3.3.4_1
@@ -11,7 +12,6 @@ dmenu-4.6_2
 feh-2.18.2_1
 firefox-52.0.1_1
 font-inconsolata-otf-001.010_2
-gcc-6.3.0_3
 git-2.12.2_1
 gnome-themes-standard-3.22.2_1
 gummiboot-48_2
@@ -20,11 +20,10 @@ i3-gaps-4.12_1
 i3blocks-1.4_2
 links-2.14_1
 lxappearance-0.6.3_1
-lxterminal-0.3.0_1
-make-4.2.1_3
 ntfs-3g-2016.2.22_2
 openconnect-7.08_1
 scrot-0.8_5
+st-0.7_1
 terminus-font-4.40_1
 vim-8.0.0442_1
 xf86-input-synaptics-1.9.0_1
