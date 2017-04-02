@@ -14,3 +14,4 @@
 /home/kiarash/.gitconfig
 /home/kiarash/.config/user-dirs.dirs
 /home/kiarash/.config/i3/config
+/home/kiarash/.config/nvim/init.vim
