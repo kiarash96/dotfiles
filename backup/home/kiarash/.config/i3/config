@@ -13,9 +13,8 @@
 set $mod Mod4
 set $alt Mod1
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:Cantarell 9
+# do not waste space on tab and stacked title bars
+font pango:Cantarell 0
 
 # enable back and forth switch
 workspace_auto_back_and_forth yes
@@ -148,7 +147,8 @@ bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command exec i3blocks
+    font pango:Cantarell 9
+    status_command exec i3blocks
 	#mode hide
 	#modifier Mod3
 	
