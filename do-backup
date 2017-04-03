@@ -4,10 +4,10 @@
 # installed packages.
 #
 
-PKGS_FILE="pkgs.txt"
-LIST_FILE="files.txt"
+PKGS_FILE="pkgs"
+LIST_FILE="watchlist"
 
-BACKUP_DIR="backup"
+BACKUP_DIR="storage"
 
 # Backup $1 which is a file.
 backfile() {
