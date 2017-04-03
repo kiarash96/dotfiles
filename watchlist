@@ -16,3 +16,6 @@
 /home/kiarash/.config/user-dirs.dirs
 /home/kiarash/.config/i3/config
 /home/kiarash/.config/nvim/init.vim
+/home/kiarash/.zshenv
+/home/kiarash/.config/zsh/.zshenv
+/home/kiarash/.config/zsh/.zshrc
