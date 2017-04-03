@@ -4,8 +4,8 @@
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
 
-/home/kiarash/bin/set-brightness.sh
-/home/kiarash/bin/vpn.sh
+/home/kiarash/bin/set-brightness
+/home/kiarash/bin/vpn
 
 /home/kiarash/.config/gtk-3.0/settings.ini
 /home/kiarash/.gtkrc-2.0
