@@ -160,8 +160,10 @@ bar {
 
 # i3-gaps
 
-gaps inner 8
-gaps outer 2
+gaps inner 0
+gaps outer 0
+
+#smart_gaps on
 
 # show borders only when there is more than one container
 #smart_borders on
