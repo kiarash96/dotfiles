@@ -6,6 +6,7 @@
 
 /home/kiarash/bin/set-brightness
 /home/kiarash/bin/vpn
+/home/kiarash/bin/xcwd-terminal
 
 /home/kiarash/.config/gtk-3.0/settings.ini
 /home/kiarash/.gtkrc-2.0
