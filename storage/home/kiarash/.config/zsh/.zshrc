@@ -6,11 +6,12 @@
 autoload -U compinit
 compinit
 zstyle ':completion:*' menu select # enable navigation in autocomplete menu
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*' # case insensitive (all), partial-word and substring completion
+zstyle ':completion:*' list-colors '' # color in completion menu
 
-# default prompt
-autoload -U promptinit
-promptinit
-prompt redhat
+# misc options
+setopt correct # suggest correction for commands
+setopt notify # Report the status of backgrounds jobs immediately
 
 # vim style line editor
 bindkey -v
@@ -19,6 +20,14 @@ bindkey -v
 bindkey '^[[P' delete-char
 bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
+
+# ctrl left/right
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+# home and end
+bindkey "^[[H" beginning-of-line
+bindkey "\e[4~" end-of-line
 
 # rupa/z
 _Z_CMD=j
@@ -38,7 +47,8 @@ if ! zgen saved; then
 fi
 
 # zsh-syntax-highlighting plugin
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=yellow'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[path]='none'
 
 # History and zsh-history-substring-search plugin
@@ -59,6 +69,9 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # zsh-autosuggestions plugin
 bindkey '^ ' autosuggest-accept
+
+# my custom prompt
+source $ZDOTDIR/prompt.zsh
 
 # Command aliases
 alias ls='ls --color=auto'
