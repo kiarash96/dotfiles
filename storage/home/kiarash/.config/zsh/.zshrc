@@ -74,6 +74,14 @@ bindkey '^ ' autosuggest-accept
 source $ZDOTDIR/prompt.zsh
 
 # Command aliases
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+alias backlight-ctl='sudo backlight-ctl'
+
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias zzz='sudo zzz'
+alias ZZZ='sudo ZZZ'
 

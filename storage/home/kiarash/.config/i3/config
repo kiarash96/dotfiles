@@ -146,10 +146,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
 
 # fn keys
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo /usr/local/bin/set-mon-brightness +
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo /usr/local/bin/set-mon-brightness -
-bindsym XF86KbdBrightnessUp exec --no-startup-id sudo /usr/local/bin/set-kbd-brightness +
-bindsym XF86KbdBrightnessDown exec --no-startup-id sudo /usr/local/bin/set-kbd-brightness -
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo backlight-ctl mon +
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo backlight-ctl mon -
+bindsym XF86KbdBrightnessUp exec --no-startup-id sudo backlight-ctl kbd +
+bindsym XF86KbdBrightnessDown exec --no-startup-id sudo backlight-ctl kbd -
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

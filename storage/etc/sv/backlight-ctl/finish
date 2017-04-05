@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/local/bin/backlight-ctl mon save
+/usr/local/bin/backlight-ctl kbd save

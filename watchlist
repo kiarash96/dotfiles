@@ -4,6 +4,9 @@
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
 
+/etc/sv/backlight-ctl/run
+/etc/sv/backlight-ctl/finish
+
 /usr/local/bin/
 
 /home/kiarash/bin/vpn

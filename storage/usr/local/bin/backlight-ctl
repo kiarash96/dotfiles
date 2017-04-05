@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if [ $EUID -ne 0 ]; then
+    echo "Please run this program as superuser"
+    exit 1
+fi
+
+STORAGE=/var/lib/backlight-ctl
+
+if [ $1 = "mon" ]; then
+    DEVICE=/sys/class/backlight/intel_backlight
+    min=40
+    step=10
+elif [ $1 = "kbd" ]; then
+    DEVICE=/sys/class/leds/asus::kbd_backlight
+    min=0
+    step=1
+else
+    echo "Unknown device " $1
+    exit 1
+fi
+
+curr=$(cat $DEVICE/brightness)
+max=$(cat $DEVICE/max_brightness)
+
+if [ $2 = '+' ]; then
+	next=$((curr+step))
+	echo $(( next > max ? max : next )) > $DEVICE/brightness
+elif [ $2 = '-' ]; then
+	next=$((curr-step))
+	echo $(( next < min ? min : next )) > $DEVICE/brightness
+elif [ $2 = "save" ]; then
+    mkdir -p $STORAGE
+    echo $curr > $STORAGE/$1
+elif [ $2 = "restore" ] && [ -f $STORAGE/$1 ]; then
+    cat $STORAGE/$1 > $DEVICE/brightness
+else # $2 is a number
+    echo $2 > $DEVICE/brightness
+fi
