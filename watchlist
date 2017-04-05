@@ -4,7 +4,8 @@
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
 
-/home/kiarash/bin/set-brightness
+/usr/local/bin/
+
 /home/kiarash/bin/vpn
 /home/kiarash/bin/xcwd-terminal
 
