@@ -17,7 +17,7 @@ set $alt Mod1
 font pango:Cantarell 0
 
 # enable back and forth switch
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -145,11 +145,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # take a screenshot
 bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
 
-# fn keys
+# monitor brightness keys
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo backlight-ctl mon +
 bindsym XF86MonBrightnessDown exec --no-startup-id sudo backlight-ctl mon -
+
+# keyboard led brightness keys
 bindsym XF86KbdBrightnessUp exec --no-startup-id sudo backlight-ctl kbd +
 bindsym XF86KbdBrightnessDown exec --no-startup-id sudo backlight-ctl kbd -
+
+# touchpad toggle key
+bindsym XF86TouchpadToggle exec --no-startup-id set-touchpad toggle
+
+# volume control keys
+bindsym XF86AudioMute exec --no-startup-id set-volume toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id set-volume -
+bindsym XF86AudioRaiseVolume exec --no-startup-id set-volume +
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

@@ -1,15 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ $EUID -ne 0 ]; then
-    echo "Please run this program as superuser"
-    exit 1
+# exit if another instance is running
+if pidof -o %PPID -x backlight-ctl > /dev/null; then
+    echo "Another instance is already running. Exiting..."
+    exit
 fi
 
 STORAGE=/var/lib/backlight-ctl
 
 if [ $1 = "mon" ]; then
     DEVICE=/sys/class/backlight/intel_backlight
-    min=40
+    min=30
     step=10
 elif [ $1 = "kbd" ]; then
     DEVICE=/sys/class/leds/asus::kbd_backlight
@@ -25,15 +26,26 @@ max=$(cat $DEVICE/max_brightness)
 
 if [ $2 = '+' ]; then
 	next=$((curr+step))
-	echo $(( next > max ? max : next )) > $DEVICE/brightness
 elif [ $2 = '-' ]; then
 	next=$((curr-step))
-	echo $(( next < min ? min : next )) > $DEVICE/brightness
 elif [ $2 = "save" ]; then
     mkdir -p $STORAGE
     echo $curr > $STORAGE/$1
 elif [ $2 = "restore" ] && [ -f $STORAGE/$1 ]; then
-    cat $STORAGE/$1 > $DEVICE/brightness
+    next=$(cat $STORAGE/$1)
 else # $2 is a number
-    echo $2 > $DEVICE/brightness
+    next=$2
+fi
+
+if [ $next ]; then
+    if [ $next -lt $min ]; then
+        next=$min
+    elif [ $next -gt $max ]; then
+        next=$max
+    fi
+    sign=$(($curr < $next ? 1 : -1))
+    for i in $(seq $curr $sign $next); do
+        echo $i > $DEVICE/brightness
+        sleep 0.01
+    done
 fi

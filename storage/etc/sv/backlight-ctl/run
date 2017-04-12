@@ -1,4 +1,4 @@
 #!/bin/sh
 /usr/local/bin/backlight-ctl mon restore
 /usr/local/bin/backlight-ctl kbd restore
-exec chpst -b backlight-ctl pause
+exec chpst -b backlight-ctl-d pause

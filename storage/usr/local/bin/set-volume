@@ -1,0 +1,15 @@
+#!/bin/sh
+
+channel=Master
+step=5
+
+if [ $1 = "toggle" ]; then
+    amixer set $channel toggle > /dev/null
+elif [ $1 = "+" ]; then
+    amixer set $channel "$step+" > /dev/null
+elif [ $1 = "-" ]; then
+    amixer set $channel "$step-" > /dev/null
+fi
+
+# signal i3bar
+pkill -RTMIN+1 i3blocks
