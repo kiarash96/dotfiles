@@ -1,0 +1,13 @@
+#!/bin/sh
+
+if [ $BLOCK_INSTANCE ]; then
+    IF=$BLOCK_INSTANCE
+else
+    IF=$(ip route | grep default | cut -d ' ' -f 5) || IF=wlp2s0
+fi
+
+IP=$(ip addr show $IF | grep 'scope global' | awk '{ print $2 }' | sed -e 's|/.*||')
+
+echo $IP
+echo $IP
+echo \000F00

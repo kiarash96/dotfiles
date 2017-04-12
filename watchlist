@@ -11,6 +11,7 @@
 
 /home/kiarash/bin/vpn
 /home/kiarash/bin/xcwd-terminal
+/home/kiarash/bin/i3blocks/
 
 /home/kiarash/.config/gtk-3.0/settings.ini
 /home/kiarash/.gtkrc-2.0
@@ -19,6 +20,7 @@
 /home/kiarash/.gitconfig
 /home/kiarash/.config/user-dirs.dirs
 /home/kiarash/.config/i3/config
+/home/kiarash/.config/i3blocks/config
 /home/kiarash/.config/nvim/init.vim
 
 /home/kiarash/.zshenv

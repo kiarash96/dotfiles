@@ -1,0 +1,15 @@
+#!/bin/sh
+
+IF=${BLOCK_INSTANCE:-wlp2s0}
+STATUS=$(cat /sys/class/net/$IF/operstate)
+
+if [ $STATUS = "up" ]; then
+    SSID=$(iw dev $IF link | grep SSID | cut -d ' ' -f 2)
+    echo $SSID
+    echo $SSID
+    echo \00FF00
+else
+    echo "Down"
+    echo "Down"
+    echo \FF0000
+fi

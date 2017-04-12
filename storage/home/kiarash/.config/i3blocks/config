@@ -1,0 +1,22 @@
+command=~/bin/i3blocks/$BLOCK_NAME
+interval=5
+separator_block_width=30
+
+[volume]
+label=VOL:
+signal=1
+
+[wifi]
+label=WIFI:
+
+[ip]
+
+[memory]
+
+[battery]
+label=BAT:
+interval=60
+
+[time]
+command=date +"%a %F %R"
+interval=60
