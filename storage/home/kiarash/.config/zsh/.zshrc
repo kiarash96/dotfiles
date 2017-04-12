@@ -71,7 +71,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^ ' autosuggest-accept
 
 # my custom prompt
-source $ZDOTDIR/prompt.zsh
+PROMPT="%(?.%F{green}.%F{9})❯%f "
 
 # Command aliases
 
@@ -85,3 +85,13 @@ alias reboot='sudo reboot'
 alias zzz='sudo zzz'
 alias ZZZ='sudo ZZZ'
 
+
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
