@@ -6,6 +6,11 @@ set laststatus=0 showmode ruler noshowcmd "Disable statusbar
 set hidden " Enable switching buffers when there are unsaved changes
 set splitright splitbelow
 
+" Auto reaload file when changed from outside
+set autoread 
+au FocusGained,BufEnter * :silent! !
+au FocusLost,BufEnter * :silent! w
+
 "set clipboard+=unnamedplus " Sync X clipboard with unnamed register
 
 set backup undofile
@@ -41,6 +46,8 @@ call plug#begin('~/.cache/nvim/plugged')
 
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
+
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
