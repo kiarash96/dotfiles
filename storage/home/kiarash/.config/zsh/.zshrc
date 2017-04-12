@@ -31,6 +31,7 @@ bindkey "\e[4~" end-of-line
 
 # rupa/z
 _Z_CMD=j
+_Z_DATA=~/.cache/z
 
 # load zgen plugin manager
 ZGEN_INIT=$ZDOTDIR/.zgeninit
