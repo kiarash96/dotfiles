@@ -143,7 +143,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # take a screenshot
-bindsym Print exec --no-startup-id scrot /tmp/snapshot.png
+bindsym Print exec --no-startup-id scrot '/tmp/snapshot-%F-%H%M%S.png'
 
 # monitor brightness keys
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo backlight-ctl mon +
@@ -166,12 +166,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id set-volume +
 bar {
     font pango:Cantarell 9
     status_command exec i3blocks
-	#mode hide
-	#modifier Mod3
-	
-	# run these for menu key to work
-	#xmodmap -e 'add mod3 = Menu'
-	#xmodmap -e 'keysym Menu = Hyper_L'
+	mode hide
+	modifier Mod3
 }
 
 # i3-gaps
@@ -182,7 +178,7 @@ gaps outer 0
 #smart_gaps on
 
 # show borders only when there is more than one container
-#smart_borders on
+smart_borders on
 
 # startup scripts
 

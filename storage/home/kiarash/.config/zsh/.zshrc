@@ -13,6 +13,9 @@ zstyle ':completion:*' list-colors '' # color in completion menu
 setopt correct # suggest correction for commands
 setopt notify # Report the status of backgrounds jobs immediately
 
+# don't kill background jobs when leaving shell
+setopt no_hup no_check_jobs
+
 # vim style line editor
 bindkey -v
 
@@ -85,7 +88,6 @@ alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
 alias zzz='sudo zzz'
 alias ZZZ='sudo ZZZ'
-
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
