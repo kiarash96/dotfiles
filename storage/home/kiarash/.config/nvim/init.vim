@@ -6,11 +6,6 @@ set laststatus=0 showmode ruler noshowcmd "Disable statusbar
 set hidden " Enable switching buffers when there are unsaved changes
 set splitright splitbelow
 
-" Auto reaload file when changed from outside
-set autoread 
-au FocusGained,BufEnter * :silent! !
-au FocusLost,BufEnter * :silent! w
-
 "set clipboard+=unnamedplus " Sync X clipboard with unnamed register
 
 set backup undofile
@@ -49,6 +44,8 @@ Plug 'morhetz/gruvbox'
 
 Plug 'ap/vim-buftabline'
 
+Plug 'kelwin/vim-smali'
+
 call plug#end()
 
 " Gruvbox colorscheme
@@ -59,3 +56,4 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='medium'
 colorscheme gruvbox
+

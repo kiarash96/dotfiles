@@ -1,10 +1,8 @@
 #!/bin/sh
 #
-# This script backups listed important files and creates a list of
-# installed packages.
+# This script backups listed important files
 #
 
-PKGS_FILE="pkgs"
 LIST_FILE="watchlist"
 
 BACKUP_DIR="storage"
@@ -21,10 +19,6 @@ backfile() {
 
 rm -rf $BACKUP_DIR
 mkdir -p $BACKUP_DIR
-
-echo "Listing installed packages..."
-xbps-query -m > $PKGS_FILE
-echo "done."
 
 echo "Copying files..."
 

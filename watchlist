@@ -3,6 +3,7 @@
 /etc/xbps.d/
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
+/etc/profile.d/99_kiarash.sh
 
 /etc/sv/backlight-ctl/run
 /etc/sv/backlight-ctl/finish
