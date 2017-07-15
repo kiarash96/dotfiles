@@ -1,9 +1,0 @@
-#
-# See fstab(5).
-#
-# <file system>					<dir>	<type>	<options>		<dump>	<pass>
-UUID=a7ad79cd-b931-4020-8dd4-8bbe400e0355	/	ext4	rw,noatime,discard	0	1
-UUID=FB7F-153F					/boot	vfat	rw,noatime,discard	0	2
-UUID=3255ba30-34b0-4766-a8d7-e775bf1ec6bd	/home	ext4	rw,noatime,discard	0	2
-tmpfs						/tmp	tmpfs	defaults,nosuid,nodev   0       0
-UUID=b754b1d3-0e55-4380-b5e6-6f5161e8f713	swap	swap	defaults,discard	0	0

@@ -1,3 +1,0 @@
-#!/bin/sh
-LD_LIBRARY_PATH=/opt/dotnet/lib:/opt/dotnet/lib/icu:$LD_LIBRARY_PATH exec \
-    /opt/dotnet/dotnet $@

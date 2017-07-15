@@ -32,19 +32,12 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[H" beginning-of-line
 bindkey "\e[4~" end-of-line
 
-# rupa/z
-_Z_CMD=j
-_Z_DATA=~/.cache/z
-
 # load zgen plugin manager
-ZGEN_INIT=$ZDOTDIR/.zgeninit
-source "$ZDOTDIR/zgen/zgen.zsh"
+source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
     zgen load zsh-users/zsh-autosuggestions
-
-    zgen load rupa/z
 
     # generate static init script
     zgen save
@@ -75,19 +68,13 @@ bindkey -M vicmd 'j' history-substring-search-down
 bindkey '^ ' autosuggest-accept
 
 # my custom prompt
-PROMPT="%(?.%F{green}.%F{9})❯%f "
+PROMPT="%F{5}[%1~]%f "
+PROMPT+="%(?.%F{green}.%F{9})❯%f "
 
 # Command aliases
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-alias backlight-ctl='sudo backlight-ctl'
-
-alias poweroff='sudo poweroff'
-alias reboot='sudo reboot'
-alias zzz='sudo zzz'
-alias ZZZ='sudo ZZZ'
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \

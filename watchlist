@@ -1,30 +1,17 @@
-/etc/fstab
-/etc/rc.conf
-/etc/xbps.d/
 /etc/modprobe.d/
 /etc/X11/xorg.conf.d/
-/etc/profile.d/99_kiarash.sh
-
-/etc/sv/backlight-ctl/run
-/etc/sv/backlight-ctl/finish
 
 /usr/local/bin/
 
-/home/kiarash/bin/vpn
-/home/kiarash/bin/xcwd-terminal
-/home/kiarash/bin/i3blocks/
+~/.config/gtk-3.0/settings.ini
+~/.gtkrc-2.0
 
-/home/kiarash/.config/gtk-3.0/settings.ini
-/home/kiarash/.gtkrc-2.0
+~/.editorconfig
+~/.gitconfig
+~/.config/user-dirs.dirs
+~/.config/nvim/init.vim
+~/.config/fontconfig/
 
-/home/kiarash/.Xmodmap
-/home/kiarash/.editorconfig
-/home/kiarash/.gitconfig
-/home/kiarash/.config/user-dirs.dirs
-/home/kiarash/.config/i3/config
-/home/kiarash/.config/i3blocks/config
-/home/kiarash/.config/nvim/init.vim
-
-/home/kiarash/.zshenv
-/home/kiarash/.config/zsh/.zshenv
-/home/kiarash/.config/zsh/.zshrc
+~/.zshenv
+~/.config/zsh/.zshenv
+~/.config/zsh/.zshrc

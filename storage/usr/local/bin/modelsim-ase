@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /opt/intel-fpga/16.1/modelsim_ase/bin/vsim $@

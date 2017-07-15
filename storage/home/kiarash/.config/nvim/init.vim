@@ -21,7 +21,6 @@ nnoremap k gk
 nnoremap j gj
 nnoremap <up> gk
 nnoremap <down> gj
-set textwidth=80 wrapmargin=80
 
 " Set leader
 let mapleader = "\\"
