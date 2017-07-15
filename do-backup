@@ -9,7 +9,6 @@ BACKUP_DIR="storage"
 
 # Backup $1 which is a file.
 backfile() {
-    echo "Backing up $1"
     dir=$(dirname $1)
     name=$(basename $1)
 
@@ -20,19 +19,17 @@ backfile() {
 rm -rf $BACKUP_DIR
 mkdir -p $BACKUP_DIR
 
-echo "Copying files..."
-
-sed -i "s|~|$HOME|g" $LIST_FILE
-
 while read -r line
 do
+    line=${line/#\~/$HOME}
     if [ ! -z "$line" ]; then
 	list=$(find "$line" -type f 2> /dev/null)
         if [ -z "$list" ]; then
-            echo "\033[1;31m$line was not found!\033[0m"
+            echo -e "\033[31m[x] $line \033[0m"
         fi
         for file in $list
         do
+            echo -e "\033[32m[\xE2\x9C\x93]\033[0m $file"
             backfile $file
         done
     fi
