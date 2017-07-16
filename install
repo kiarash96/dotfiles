@@ -1,0 +1,34 @@
+#!/bin/sh
+
+PKGS_FILE=pkgs
+AUR_FILE=pkgs-aur
+LIST_FILE=watchlist
+
+install_pkgs() {
+    install_cmd="$1"
+    install_file="$2"
+
+    final_pkgs=""
+    while read -u 3 -r line
+    do
+        if [ ! -z "$line" ]; then
+            read -e -p "install $line? (Y/n) " -n 1 choice
+            if [ "$choice" != "n" ]; then
+                final_pkgs+=" $line"
+            fi
+        fi
+    done 3< $install_file
+
+    if [ ! -z "$final_pkgs" ]; then
+        eval "$install_cmd $final_pkgs"
+    fi
+}
+
+echo "Installing official packages..."
+install_pkgs "sudo pacman -Syu" $PKGS_FILE
+echo "Done."
+
+echo "Installing AUR packages..."
+install_pkgs "pacaur -Sa" $AUR_FILE
+echo "Done."
+
