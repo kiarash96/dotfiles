@@ -3,11 +3,9 @@
 
 /usr/local/bin/
 
-~/.config/gtk-3.0/settings.ini
-~/.gtkrc-2.0
-
 ~/.editorconfig
 ~/.gitconfig
+~/.tmux.conf
 ~/.config/user-dirs.dirs
 ~/.config/nvim/init.vim
 ~/.config/fontconfig/

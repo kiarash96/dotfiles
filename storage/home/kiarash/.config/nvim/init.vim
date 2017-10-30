@@ -39,6 +39,7 @@ autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
 call plug#begin('~/.cache/nvim/plugged')
 
 Plug 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 
 Plug 'ap/vim-buftabline'
@@ -47,12 +48,14 @@ Plug 'kelwin/vim-smali'
 
 call plug#end()
 
-" Gruvbox colorscheme
 set termguicolors
 set background=dark
-let g:gruvbox_invert_selection=0
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='medium'
-colorscheme gruvbox
 
+" Gruvbox colorscheme
+"let g:gruvbox_invert_selection=0
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_light='medium'
+"colorscheme gruvbox
+
+colorscheme molokai
