@@ -45,6 +45,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ap/vim-buftabline'
 
 Plug 'kelwin/vim-smali'
+Plug 'dag/vim-fish'
 
 call plug#end()
 
