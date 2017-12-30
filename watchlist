@@ -8,5 +8,8 @@
 ~/.tmux.conf
 ~/.config/user-dirs.dirs
 ~/.config/nvim/init.vim
-~/.config/fish/config.fish
 ~/.config/fontconfig/
+
+~/.zshenv
+~/.config/zsh/.zshrc
+~/.config/zsh/.zshenv
