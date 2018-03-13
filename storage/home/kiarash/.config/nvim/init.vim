@@ -53,10 +53,10 @@ set termguicolors
 set background=dark
 
 " Gruvbox colorscheme
-"let g:gruvbox_invert_selection=0
-"let g:gruvbox_italic=1
-"let g:gruvbox_contrast_dark='hard'
-"let g:gruvbox_contrast_light='medium'
-"colorscheme gruvbox
+let g:gruvbox_invert_selection=0
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='medium'
+colorscheme gruvbox
 
-colorscheme molokai
+"colorscheme molokai
