@@ -59,4 +59,7 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='medium'
 colorscheme gruvbox
 
+highlight Normal guibg=none
+highlight NonText guibg=none
+
 "colorscheme molokai

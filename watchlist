@@ -3,10 +3,9 @@
 
 /usr/local/bin/
 
-~/.editorconfig
 ~/.gitconfig
 ~/.tmux.conf
-~/.config/user-dirs.dirs
+~/.config/termite/config
 ~/.config/nvim/init.vim
 ~/.config/fontconfig/
 

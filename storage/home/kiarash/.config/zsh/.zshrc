@@ -51,7 +51,7 @@ ZSH_HIGHLIGHT_STYLES[path]='none'
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=10000000
 SAVEHIST=10000000
-setopt SHARE_HISTORY            # Share history between all sessions.
+#setopt SHARE_HISTORY            # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST   # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS         # Don't record an entry that was just recorded again.
 setopt HIST_IGNORE_ALL_DUPS     # Delete old recorded entry if new entry is a duplicate.
@@ -78,7 +78,7 @@ local _hostcolor="$fg[default]"
 local _who="%{$_hostcolor%}[%{$_usercolor%}%n%{$reset_color$_hostcolor%}@%M]%{$reset_color%}"
 
 local _path="%{$fg[magenta]%}[%1~]%{$reset_color%}"
-local _prompt="%(?.%{$fg[green]%}.%{$fg[red]%})❯ %{$reset_color%}"
+local _prompt="%(?.%{$fg[green]%}.%{$fg[red]%})» %{$reset_color%}"
 
 PROMPT="$_who $_path $_prompt"
 
