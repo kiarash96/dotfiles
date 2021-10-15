@@ -32,8 +32,8 @@ autocmd BufReadPost *
     \ endif
 
 " Different file types local settings
-autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php,*.css,*.scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php,*.css,*.scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Start vim-plug
 call plug#begin('~/.cache/nvim/plugged')
@@ -44,8 +44,10 @@ Plug 'morhetz/gruvbox'
 
 Plug 'ap/vim-buftabline'
 
-Plug 'kelwin/vim-smali'
-Plug 'dag/vim-fish'
+" Syntax addons
+" Plug 'kelwin/vim-smali'
+Plug 'blankname/vim-fish'
+
 
 call plug#end()
 
@@ -59,7 +61,4 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='medium'
 colorscheme gruvbox
 
-highlight Normal guibg=none
-highlight NonText guibg=none
-
-"colorscheme molokai
+colorscheme molokai

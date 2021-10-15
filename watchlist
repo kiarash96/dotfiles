@@ -1,14 +1,19 @@
+/etc/NetworkManager/conf.d/
+/etc/default/grub
 /etc/modprobe.d/
-/etc/X11/xorg.conf.d/
+/etc/pulse/default.pa
+/etc/fstab
+/etc/mkinitcpio.conf
+/etc/pacman.conf
+/etc/vconsole.conf
 
 /usr/local/bin/
 
 ~/.gitconfig
 ~/.tmux.conf
-~/.config/termite/config
 ~/.config/nvim/init.vim
 ~/.config/fontconfig/
+~/.config/user-dirs.dirs
 
-~/.zshenv
-~/.config/zsh/.zshrc
-~/.config/zsh/.zshenv
+~/.config/fish/functions/
+

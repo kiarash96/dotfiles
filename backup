@@ -4,8 +4,7 @@
 #
 
 LIST_FILE="watchlist"
-
-BACKUP_DIR="storage"
+BACKUP_DIR="rootfs"
 
 # Backup $1 which is a file.
 backfile() {
