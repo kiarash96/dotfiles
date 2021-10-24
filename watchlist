@@ -1,11 +1,11 @@
-/etc/NetworkManager/conf.d/
-/etc/default/grub
 /etc/modprobe.d/
-/etc/pulse/default.pa
-/etc/fstab
-/etc/mkinitcpio.conf
-/etc/pacman.conf
+/etc/sysctl.d/
+/etc/booster.yaml
 /etc/vconsole.conf
+/etc/fstab
+
+/etc/NetworkManager/conf.d/
+/etc/pacman.conf
 
 /usr/local/bin/
 
@@ -14,6 +14,5 @@
 ~/.config/nvim/init.vim
 ~/.config/fontconfig/
 ~/.config/user-dirs.dirs
-
-~/.config/fish/functions/
+~/.config/fish/
 

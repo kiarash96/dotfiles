@@ -5,16 +5,22 @@ set incsearch hlsearch
 set laststatus=0 showmode ruler noshowcmd "Disable statusbar
 set hidden " Enable switching buffers when there are unsaved changes
 set splitright splitbelow
+set mouse=a
 
 "set clipboard+=unnamedplus " Sync X clipboard with unnamed register
 
 set backup undofile
-set backupdir=/tmp/nvim/backup
-set directory=/tmp/nvim/swap
-set undodir=/tmp/nvim/undo
+
+let g:base_data_dir = expand($TMPDIR) . "/nvim"
+
+let &backupdir = g:base_data_dir . "/backup"
+let &directory = g:base_data_dir . "/swap"
+let &undodir = g:base_data_dir . "/undo"
+
+execute "silent !mkdir -p " . &backupdir . " " . &directory . " " . &undodir
 
 " Create directories if they do not exist
-silent !mkdir -p /tmp/nvim/backup /tmp/nvim/swap /tmp/nvim/undo
+"silent !mkdir -p "$TMPDIR/nvim/backup" "$TMPDIR/nvim/swap" "$TMPDIR/nvim/undo"
 
 " Better navigation in wrapped lines
 nnoremap k gk
