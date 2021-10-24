@@ -34,4 +34,8 @@ do
     fi
 done < $LIST_FILE
 
-echo "done."
+echo -n 'Saving insalled packages... '
+pacman -Qeq > packages
+echo 'Done.'
+
+echo "Finished backup."
