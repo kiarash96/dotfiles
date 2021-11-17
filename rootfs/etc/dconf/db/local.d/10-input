@@ -1,0 +1,15 @@
+[org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us'), ('xkb', 'ir')]
+sources=[('xkb', 'us'), ('xkb', 'ir')]
+per-window=false
+
+[org/gnome/desktop/peripherals/touchpad]
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/wm/keybindings]
+switch-input-source=['<Alt>Shift_L']
+switch-input-source-backward=['<Shift>Alt_L']
+
+[org/gnome/desktop/input-sources]
+xkb-options=['grp:lalt_lshift_toggle']

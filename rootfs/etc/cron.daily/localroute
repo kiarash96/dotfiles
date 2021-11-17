@@ -1,0 +1,2 @@
+#!/bin/sh
+exec curl https://raw.githubusercontent.com/herrbischoff/country-ip-blocks/master/ipv4/ir.cidr -o /etc/localroute.d/ir.cidr -sS --fail

@@ -1,0 +1,36 @@
+#!/bin/sh
+
+ERR() {
+    echo 'doasedit: '"$1";
+    exit $2;
+}
+
+USAGE() {
+    echo 'Usage: doasedit [FILE]...'
+    exit 4
+}
+
+[ "$(id -u)" = 0 ] && ERR "Do not run doasedit as root!" 1
+[ "$(/sbin/doas -C /etc/doas.conf doasedit \"$1\")" = "permit" ] || ERR "You are not a doer" 2
+[ "$#" = "0" ] && USAGE
+
+tmp=$(mktemp) || ERR "mktemp returned an error" 5
+
+if [ -r "$1" ]; then
+    cat -- "$1" > "$tmp" || ERR "Cannot read file" 6
+elif doas sh -c "[ -r '$1' ]"; then
+    doas cat -- "$1" > "$tmp" || ERR "Cannot read file" 6
+fi
+
+$EDITOR "$tmp" || ERR "The editor failed to exit successfully" 7
+
+[ -e "$1" ] && cmp -s -- "$tmp" "$1" && exit 0
+
+x="1"
+while [ "$x" != "0" ]; do
+    cat "$tmp" | doas tee -- "$1" > /dev/null
+    x="$?"
+done
+
+rm -f -- "$tmp"
+

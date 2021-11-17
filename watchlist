@@ -1,18 +1,58 @@
+# Kernel + Boot
+/etc/default/grub
+/etc/dracut.conf.d/
+/etc/modules-load.d/
 /etc/modprobe.d/
 /etc/sysctl.d/
-/etc/booster.yaml
-/etc/vconsole.conf
 /etc/fstab
+/etc/rc.conf
 
+# Network
 /etc/NetworkManager/conf.d/
-/etc/pacman.conf
+/etc/resolvconf.conf
+/etc/resolv.conf
+/etc/dnsmasq.conf
+/etc/NetworkManager/dispatcher.d/10-localroute
 
+# System wide package configuration
+/etc/environment
+/etc/doas.conf
+/etc/chrony.conf
+/etc/xbps.d/
+
+# System services
+/etc/sv/brightnessctl/
+
+# User services
+~/service/aria2/run
+
+# Cron jobs
+/etc/cron.daily/
+/etc/cron.weekly/
+
+# System scripts
 /usr/local/bin/
 
+# User settings
+~/.config/user-dirs.dirs
+~/.config/fontconfig/
 ~/.gitconfig
 ~/.tmux.conf
+~/.config/alacritty/
 ~/.config/nvim/init.vim
-~/.config/fontconfig/
-~/.config/user-dirs.dirs
 ~/.config/fish/
+~/.config/mpv/
+~/.config/aria2/aria2.conf
+~/.config/Code/User/settings.json
+
+# GDM on wayland workaround
+/usr/lib/udev/rules.d/61-gdm.rules
+
+# Firefox settings
+/usr/lib/firefox/defaults/pref/local-settings.js
+/usr/lib/firefox/mozilla.cfg
+
+# Local dconf database settings for gnome desktop
+/etc/dconf/profile/user
+/etc/dconf/db/local.d/
 

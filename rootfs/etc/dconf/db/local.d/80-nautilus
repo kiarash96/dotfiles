@@ -1,0 +1,13 @@
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+search-filter-time-type='last_modified'
+show-create-link=true
+
+[org/gnome/nautilus/list-view]
+default-zoom-level='small'
+
+[org/gtk/settings/file-chooser]
+sort-directories-first=true
+
+[org/gtk/gtk4/settings/file-chooser]
+sort-directories-first=true

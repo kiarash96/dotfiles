@@ -11,7 +11,8 @@ set mouse=a
 
 set backup undofile
 
-let g:base_data_dir = expand($TMPDIR) . "/nvim"
+" let g:base_data_dir = expand($TMPDIR) . "/nvim"
+let g:base_data_dir = "/tmp/nvim"
 
 let &backupdir = g:base_data_dir . "/backup"
 let &directory = g:base_data_dir . "/swap"
@@ -41,30 +42,14 @@ autocmd BufReadPost *
 " autocmd BufRead,BufNewFile *.htm,*.html,*.xhtml,*.php,*.css,*.scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " autocmd BufRead,BufNewFile *.tex setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-" Start vim-plug
+" vim-plug plugins
 call plug#begin('~/.cache/nvim/plugged')
-
-Plug 'nanotech/jellybeans.vim'
 Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
-
 Plug 'ap/vim-buftabline'
-
-" Syntax addons
-" Plug 'kelwin/vim-smali'
 Plug 'blankname/vim-fish'
-
-
 call plug#end()
 
 set termguicolors
 set background=dark
-
-" Gruvbox colorscheme
-let g:gruvbox_invert_selection=0
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_contrast_light='medium'
-colorscheme gruvbox
 
 colorscheme molokai

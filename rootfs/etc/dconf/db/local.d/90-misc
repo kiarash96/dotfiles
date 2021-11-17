@@ -1,0 +1,5 @@
+[ca/desrt/dconf-editor]
+show-warning=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false

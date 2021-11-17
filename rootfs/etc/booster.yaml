@@ -1,8 +1,0 @@
-universal: false
-compression: zstd
-strip: true
-vconsole: true
-enable_lvm: false
-enable_mdraid: false
-module_force_load: i915
-extra_files: fsck,fsck.ext4,fsck.vfat,/etc/modprobe.d/i915.conf

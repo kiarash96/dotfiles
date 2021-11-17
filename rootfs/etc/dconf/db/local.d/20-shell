@@ -1,0 +1,22 @@
+[org/gnome/desktop/interface]
+clock-show-seconds=false
+clock-show-weekday=true
+enable-hot-corners=false
+show-battery-percentage=true
+gtk-enable-primary-paste=false
+gtk-theme='Adwaita'
+icon-theme='Adwaita'
+cursor-theme='Vanilla-DMZ'
+monospace-font-name='Monospace 11'
+
+[org/gnome/desktop/media-handling]
+autorun-never=true
+
+[org/gnome/desktop/privacy]
+recent-files-max-age=30
+remove-old-temp-files=true
+remove-old-trash-files=true
+
+[org/gnome/shell]
+favorite-apps=['firefox.desktop', 'uget-gtk.desktop', 'org.gnome.Nautilus.desktop', 'org.telegram.desktop.desktop.desktop', 'spotify-adblock.desktop', 'Alacritty.desktop', 'vscode.desktop']
+

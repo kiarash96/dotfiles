@@ -1,0 +1,19 @@
+{
+    "explorer.confirmDelete": false,
+    "telemetry.telemetryLevel": "off",
+
+    "workbench.colorTheme": "Default Light+",
+
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 15,
+    
+    "terminal.integrated.profiles.linux": {
+        "fish": {
+            "path": "/usr/bin/fish"
+        },
+    },
+    "terminal.integrated.defaultProfile.linux": "fish",
+    
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+}

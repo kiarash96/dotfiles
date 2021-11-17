@@ -1,0 +1,19 @@
+#!/bin/sh
+
+log() {
+    local level="$1"
+    shift
+    logger -p "daemon.$level" -t localroute "$@"
+}
+
+[ "$NM_DISPATCHER_ACTION" = up ] || [ "$NM_DISPATCHER_ACTION" = "dhcp4-change" ] || exit 0
+[ "$DEVICE_IP_IFACE" = wlp2s0 ] || [ "$DEVICE_IP_IFACE" = enp0s20u3u4 ] || exit 0
+
+[ -n "$IP4_GATEWAY" ] && ! [ "$IP4_GATEWAY" = "0.0.0.0" ] || exit 0
+
+log info "Setting up local routing for $DEVICE_IP_IFACE via $IP4_GATEWAY"
+
+for ip in $(cat /etc/localroute.d/*); do
+    ip route add "$ip" dev "$DEVICE_IP_IFACE" via "$IP4_GATEWAY"
+done
+

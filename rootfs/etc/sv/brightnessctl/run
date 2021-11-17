@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+env XDG_RUNTIME_DIR=/var/lib brightnessctl -r > /dev/null
+exec chpst -b brightness pause

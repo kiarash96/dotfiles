@@ -1,13 +1,8 @@
-# Static information about the filesystems.
-# See fstab(5) for details.
-
-# <file system> <dir> <type> <options> <dump> <pass>
-# /dev/sda3
-UUID=d690a698-ecdf-4292-86a6-9c9dd8686292	/         	ext4      	rw,relatime	0 1
-
-# /dev/sda1
-UUID=34EC-EF5F      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
-
-# /dev/sda2
-UUID=2d90fd9c-d6fb-4abe-88c9-1bb528dd3eb4	none      	swap      	defaults  	0 0
-
+#
+# See fstab(5).
+#
+# <file system>	<dir>	<type>	<options>		<dump>	<pass>
+UUID=fe486676-3419-4e2f-b4a0-ec1dc7c6c7c9  / btrfs rw,relatime,ssd,space_cache,subvolid=5,subvol=/ 0 1
+UUID=CB7E-097E  /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
+UUID=fd012e43-4143-4f9a-b8e0-58c18bde9d16	none	swap	defaults
+tmpfs		/tmp	tmpfs	defaults,nosuid,nodev   0       0

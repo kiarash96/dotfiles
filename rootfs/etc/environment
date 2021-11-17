@@ -1,0 +1,22 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+
+# Firefox
+MOZ_DBUS_REMOTE=1
+MOZ_ENABLE_WAYLAND=1
+
+# vaapi and vdpau
+VDPAU_DRIVER=va_gl
+LIBVA_DRIVER_NAME=i965
+
+# Qt
+QT_STYLE_OVERRIDE=adwaita
+CALIBRE_USE_SYSTEM_THEME=true
+QT_QPA_PLATFORM=xcb
+#XCURSOR_THEME=Vanilla-DMZ
+#XCURSOR_SIZE=16
+#QT_QPA_PLATFORM=wayland
+#QT_QPA_PLATFORMTHEME=gnome
