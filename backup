@@ -5,6 +5,7 @@
 
 LIST_FILE="watchlist"
 BACKUP_DIR="rootfs"
+PKGS_FILE="packages"
 
 # Backup $1 which is a file.
 backfile() {
@@ -41,5 +42,9 @@ cat $LIST_FILE | sed 's|#.*||g' | grep -Ev '^$' | while read -r line
 do
     backentry $line
 done
+
+echo -n "Saving installed packages... "
+xbps-query -m | xargs -I@ xbps-query @ | grep pkgname: | cut -d' ' -f2 > $PKGS_FILE
+echo "Done."
 
 echo "Finished backup."
