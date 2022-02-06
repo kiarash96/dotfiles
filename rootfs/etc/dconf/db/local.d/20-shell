@@ -6,7 +6,7 @@ show-battery-percentage=true
 gtk-enable-primary-paste=false
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
-cursor-theme='Vanilla-DMZ'
+cursor-theme='Adwaita'
 monospace-font-name='Monospace 11'
 
 [org/gnome/desktop/media-handling]
@@ -18,5 +18,5 @@ remove-old-temp-files=true
 remove-old-trash-files=true
 
 [org/gnome/shell]
-favorite-apps=['firefox.desktop', 'uget-gtk.desktop', 'org.gnome.Nautilus.desktop', 'org.telegram.desktop.desktop.desktop', 'spotify-adblock.desktop', 'Alacritty.desktop', 'vscode.desktop']
+favorite-apps=['firefox.desktop', 'geary.desktop', 'uget-gtk.desktop', 'org.gnome.Nautilus.desktop', 'org.telegram.desktop.desktop.desktop', 'spotify-adblock.desktop', 'Alacritty.desktop', 'vscode.desktop']
 

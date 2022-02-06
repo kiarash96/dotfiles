@@ -48,6 +48,9 @@
 # GDM on wayland workaround
 /usr/lib/udev/rules.d/61-gdm.rules
 
+# Udisks
+/usr/lib/udev/rules.d/99-udisks2.rules
+
 # Firefox settings
 /usr/lib/firefox/defaults/pref/local-settings.js
 /usr/lib/firefox/mozilla.cfg
