@@ -44,7 +44,7 @@ do
 done
 
 echo -n "Saving installed packages... "
-xbps-query -m | xargs -I@ xbps-query @ | grep pkgname: | cut -d' ' -f2 > $PKGS_FILE
+xpkg -m > $PKGS_FILE
 echo "Done."
 
 echo "Finished backup."

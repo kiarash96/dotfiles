@@ -8,6 +8,7 @@ binutils
 brightnessctl
 calibre
 celluloid
+cheese
 chromium
 chrony
 curl
@@ -61,6 +62,7 @@ libreoffice-gnome
 libreoffice-writer
 libspa-bluetooth
 libspa-v4l2
+libva-32bit
 libva-intel-driver
 libva-intel-driver-32bit
 libva-utils
@@ -69,6 +71,7 @@ libvirt
 man-pages-posix
 mesa-demos
 mesa-dri
+mesa-dri-32bit
 mesa-intel-dri-32bit
 mesa-vulkan-intel
 mesa-vulkan-intel-32bit
@@ -87,6 +90,7 @@ openresolv
 openvpn
 pandoc
 parted
+pavucontrol
 pipewire
 pngquant
 polkit-gnome
