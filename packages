@@ -1,4 +1,5 @@
 ImageMagick
+VSCode
 alacritty
 android-tools
 android-udev-rules
@@ -26,11 +27,13 @@ elogind
 eog
 fex
 ffmpeg
+figma-linux-font-helper
 file-roller
 firefox
 fish-shell
 font-hack-ttf
 font-vazir
+freerdp
 geary
 gedit
 git
@@ -40,6 +43,7 @@ gnome-core
 gnome-menus
 gnome-screenshot
 gnome-shell-extension-appindicator
+gnome-shell-extension-caffeine
 gnome-shell-extension-dash-to-panel
 gnome-system-monitor
 gnome-tweaks
@@ -57,6 +61,7 @@ intellij-idea-community-edition
 ldns
 libappindicator
 libgnomekbd
+libheif-tools
 libreoffice-calc
 libreoffice-gnome
 libreoffice-writer
@@ -95,6 +100,7 @@ pipewire
 pngquant
 polkit-gnome
 psmisc
+python3-devel
 qemu
 snooze
 socklog-void
