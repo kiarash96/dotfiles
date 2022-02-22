@@ -22,7 +22,7 @@ elif doas sh -c "[ -r '$1' ]"; then
     doas cat -- "$1" > "$tmp" || ERR "Cannot read file" 6
 fi
 
-$EDITOR "$tmp" || ERR "The editor failed to exit successfully" 7
+${EDITOR:-vi} "$tmp" || ERR "The editor failed to exit successfully" 7
 
 [ -e "$1" ] && cmp -s -- "$tmp" "$1" && exit 0
 

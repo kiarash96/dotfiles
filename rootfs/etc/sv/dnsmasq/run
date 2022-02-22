@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p /var/lib/misc
+mkdir -p /run/resolvconf/ && touch /run/resolvconf/resolv.conf
+exec dnsmasq -k --enable-dbus -u dnsmasq -g dnsmasq 2>&1

@@ -21,6 +21,7 @@
 /etc/xbps.d/
 
 # System services
+/etc/sv/dnsmasq/run
 /etc/sv/brightnessctl/
 
 # User services

@@ -1,6 +1,10 @@
-UUID=0bc0d4bf-ebd6-49a4-90af-5dbb165bd942 / btrfs rw,relatime,ssd,space_cache,subvolid=5,subvol=/ 0 1
-UUID=B7D3-9389 /boot/efi vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
-UUID=4c5c51af-0873-46c0-8f4f-34690f9cd317	none	swap	defaults	0 0
-tmpfs	/tmp	tmpfs	defaults,nosuid,nodev	0 0
-tmpfs   /media  tmpfs   defaults,mode=755    0 0
-
+#
+# See fstab(5).
+#
+# <file system>	<dir>	<type>	<options>		<dump>	<pass>
+/dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 / btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@/live 0 1
+/dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /mnt/btrfs btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/ 0 2
+/dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /home btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@home/live 0 2
+/dev/disk/by-uuid/0921-1C35 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
+tmpfs		/tmp	tmpfs	defaults,nosuid,nodev   0       0
+tmpfs		/media	tmpfs	defaults,mode=755   0       0
