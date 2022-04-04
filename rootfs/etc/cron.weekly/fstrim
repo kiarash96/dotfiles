@@ -1,2 +1,2 @@
 #!/bin/sh
-exec fstrim --fstab
+exec fstrim -a

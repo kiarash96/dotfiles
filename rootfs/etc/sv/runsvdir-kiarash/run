@@ -1,0 +1,12 @@
+#!/bin/sh
+
+export USER="kiarash"
+export HOME="/home/kiarash"
+
+groups="$(id -Gn "$USER" | tr ' ' ':')"
+group="$(id -gn "$USER")"
+svdir="$HOME/service"
+
+! [ -d /run/runit-$USER ] && install -m 700 -g $group -o $USER -d /run/runit-$USER
+exec chpst -u "$USER:$groups" runsvdir "$svdir"
+

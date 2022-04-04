@@ -1,16 +1,25 @@
 {
-    "explorer.confirmDelete": false,
     "telemetry.telemetryLevel": "off",
 
-    "workbench.colorTheme": "Default Light+",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
 
     "editor.fontFamily": "Hack",
     "editor.fontSize": 15,
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingQuotes": "never",
+    "html.autoCreateQuotes": false,
+    "html.autoClosingTags": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+
+    "security.workspace.trust.untrustedFiles": "open",
     
     "terminal.integrated.profiles.linux": {
         "fish": {
             "path": "/usr/bin/fish"
-        },
+        }
     },
     "terminal.integrated.defaultProfile.linux": "fish",
     

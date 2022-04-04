@@ -19,10 +19,12 @@
 /etc/doas.conf
 /etc/chrony.conf
 /etc/xbps.d/
+/etc/libvirt/libvirtd.conf
 
 # System services
 /etc/sv/dnsmasq/run
 /etc/sv/brightnessctl/
+/etc/sv/runsvdir-kiarash/run
 
 # User services
 ~/service/aria2/run
