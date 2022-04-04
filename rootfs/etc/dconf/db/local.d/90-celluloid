@@ -1,6 +1,0 @@
-[io/github/celluloid-player/celluloid]
-csd-enable=true
-dark-theme-enable=false
-mpv-config-enable=true
-mpv-config-file='/home/kiarash/.config/mpv/mpv.conf'
-settings-migrated=true

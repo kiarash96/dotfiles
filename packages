@@ -106,6 +106,7 @@ polkit-gnome
 psmisc
 python3
 python3-devel
+python3-yaml
 qemu
 shadowsocks-libev
 smbclient

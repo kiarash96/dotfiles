@@ -38,6 +38,10 @@ cd "$(dirname "$0")"
 rm -rf $BACKUP_DIR
 mkdir -p $BACKUP_DIR
 
+echo "Saving dconf settings... "
+python3 ./backup-dconf.py | doas tee "/etc/dconf/db/local.d/conf" > /dev/null
+echo "Done."
+
 cat $LIST_FILE | sed 's|#.*||g' | grep -Ev '^$' | while read -r line
 do
     backentry $line
