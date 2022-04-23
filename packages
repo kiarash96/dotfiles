@@ -1,6 +1,6 @@
 VSCode
 alacritty
-android-tools
+android-sdk-cmdline-tools
 android-udev-rules
 aria2
 base-system
@@ -33,7 +33,7 @@ file-roller
 firefox
 fish-shell
 font-hack-ttf
-font-vazir
+font-vazirmatn
 freerdp
 geary
 gedit
@@ -49,6 +49,7 @@ gnome-shell-extension-dash-to-panel
 gnome-sound-recorder
 gnome-system-monitor
 gnome-tweaks
+gnome-weather
 gparted
 grub-x86_64-efi
 gst-libav
@@ -62,6 +63,7 @@ intel-ucode
 intellij-idea-community-edition
 ldns
 libappindicator
+libcanberra-gtk
 libgnomekbd
 libheif-tools
 libreoffice-calc
@@ -83,6 +85,7 @@ mesa-dri-32bit
 mesa-intel-dri-32bit
 mesa-vulkan-intel
 mesa-vulkan-intel-32bit
+mmv
 mosh
 neovim
 nodejs
@@ -108,6 +111,7 @@ python3
 python3-devel
 python3-yaml
 qemu
+qrencode
 shadowsocks-libev
 smbclient
 snooze
@@ -138,6 +142,7 @@ void-repo-nonfree
 vulkan-loader
 vulkan-loader-32bit
 wayland
+windscribe-cli
 wine
 wine-32bit
 wine-gecko

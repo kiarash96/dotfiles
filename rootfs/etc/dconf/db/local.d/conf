@@ -58,7 +58,7 @@ gtk-enable-primary-paste=false
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
 cursor-theme='Adwaita'
-monospace-font-name='Monospace 11'
+monospace-font-name='Hack 11'
 
 [org/gnome/desktop/media-handling]
 autorun-never=true

@@ -23,3 +23,7 @@ XCURSOR_THEME=Adwaita
 #XCURSOR_SIZE=16
 #QT_QPA_PLATFORM=wayland
 #QT_QPA_PLATFORMTHEME=gnome
+
+# Wine
+WINEPREFIX=/var/lib/wine/wine64
+WINEARCH=win64
