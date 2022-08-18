@@ -4,10 +4,17 @@
 # This script backups listed important files
 #
 
-LIST_FILE="watchlist"
-DCONF_LIST_FILE="dconf-watchlist.yml"
-BACKUP_DIR="rootfs"
-PKGS_FILE="packages"
+MACHINES_DIR="./machines"
+CURRENT_MACHINE_DIR="$MACHINES_DIR/current"
+
+[ ! -L $CURRENT_MACHINE_DIR ] && ln -sf $(hostname) $CURRENT_MACHINE_DIR
+
+echo "Current machine is: $(hostname)"
+
+LIST_FILE="$CURRENT_MACHINE_DIR/watchlist"
+DCONF_LIST_FILE="$CURRENT_MACHINE_DIR/dconf-watchlist.yml"
+BACKUP_DIR="$CURRENT_MACHINE_DIR/rootfs"
+PKGS_FILE="$CURRENT_MACHINE_DIR/packages"
 
 # Backup $1 which is a file.
 backfile() {
