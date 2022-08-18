@@ -60,7 +60,6 @@ gst-libav
 gst-plugins-good1
 gstreamer-vaapi
 gstreamer1-pipewire
-gtk+3-32bit
 gvfs-mtp
 gvfs-smb
 intel-ucode
@@ -75,17 +74,12 @@ libreoffice-impress
 libreoffice-writer
 libspa-bluetooth
 libspa-v4l2
-libva-32bit
 libva-intel-driver
-libva-intel-driver-32bit
 libva-utils
 libvdpau-va-gl
 man-pages-posix
 mesa-dri
-mesa-dri-32bit
-mesa-intel-dri-32bit
 mesa-vulkan-intel
-mesa-vulkan-intel-32bit
 minisign
 mitmproxy
 mmv
@@ -98,7 +92,6 @@ noto-fonts-emoji
 noto-fonts-ttf
 ntfs-3g
 nvidia
-nvidia-libs-32bit
 opendoas
 openjdk11
 openjdk11-jre
@@ -138,11 +131,8 @@ uget-integrator
 unrar
 unzip
 void-release-keys
-void-repo-multilib
-void-repo-multilib-nonfree
 void-repo-nonfree
 vulkan-loader
-vulkan-loader-32bit
 wayland
 wget
 wimlib
