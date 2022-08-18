@@ -4,7 +4,7 @@ experimental-features=['scale-monitor-framebuffer']
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-temperature=uint32 3834
+night-light-temperature=uint32 3564
 night-light-schedule-automatic=true
 night-light-last-coordinates=(35.6892, 51.389000000000003)
 
@@ -39,7 +39,7 @@ tap-to-click=true
 two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/session]
-idle-delay=uint32 900
+idle-delay=uint32 600
 
 [org/gnome/desktop/background]
 picture-options='zoom'
@@ -47,7 +47,7 @@ picture-uri='/home/kiarash/.config/background'
 
 [org/gnome/desktop/screensaver]
 picture-options='zoom'
-picture-uri='file:///home/kiarash/Media/Pictures/Wallpapers/Desktop.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/Blobs.svg'
 
 [org/gnome/desktop/interface]
 clock-show-seconds=false

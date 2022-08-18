@@ -6,13 +6,14 @@
 
     "editor.fontFamily": "Hack",
     "editor.fontSize": 15,
+
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingDelete": "never",
     "editor.autoClosingQuotes": "never",
-    "html.autoCreateQuotes": false,
-    "html.autoClosingTags": false,
+
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
 
     "security.workspace.trust.untrustedFiles": "open",
     
@@ -25,6 +26,6 @@
     
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
-    "javascript.autoClosingTags": false,
-    "typescript.autoClosingTags": false,
+
+    "workbench.colorTheme": "Quiet Light",
 }

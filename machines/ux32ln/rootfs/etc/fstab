@@ -6,8 +6,6 @@
 /dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /mnt/btrfs btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/ 0 2
 /dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /home btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@home/live 0 2
 /dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /var/swap btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@swap/live 0 2
-/dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /var/lib/wine/wine32 btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@wine32/live 0 2
-/dev/disk/by-uuid/e10db725-261d-4cdf-b829-2c83d5237b44 /var/lib/wine/wine64 btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvol=/@wine64/live 0 2
 /dev/disk/by-uuid/0921-1C35 /boot vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
 tmpfs		/tmp	tmpfs	defaults,nosuid,nodev   0       0
 tmpfs		/media	tmpfs	defaults,mode=755   0       0

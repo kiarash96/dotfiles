@@ -19,7 +19,6 @@
 /etc/doas.conf
 /etc/chrony.conf
 /etc/xbps.d/
-/etc/libvirt/libvirtd.conf
 
 # System services
 /etc/sv/dnsmasq/run
@@ -34,7 +33,7 @@
 /etc/cron.weekly/
 
 # System scripts
-/usr/local/bin/
+/usr/local/bin/doasedit
 
 # User settings
 ~/.config/user-dirs.dirs
@@ -43,10 +42,13 @@
 ~/.tmux.conf
 ~/.config/alacritty/
 ~/.config/nvim/init.vim
-~/.config/fish/
 ~/.config/mpv/
 ~/.config/aria2/aria2.conf
 ~/.config/Code/User/settings.json
+
+# Fish shell
+~/.config/fish/fish_plugins
+~/.config/fish/functions/fish_prompt.fish
 
 # GDM on wayland workaround
 /usr/lib/udev/rules.d/61-gdm.rules
@@ -58,7 +60,7 @@
 /usr/lib/firefox/defaults/pref/local-settings.js
 /usr/lib/firefox/mozilla.cfg
 
-# Local dconf database settings for gnome desktop
+# Local dconf database
 /etc/dconf/profile/user
 /etc/dconf/db/local.d/
 

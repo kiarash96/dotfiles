@@ -2,31 +2,40 @@ font:
   normal:
     family: Hack
     style: Regular
-    size: 11.0
+  size: 11.5
 
-# Taken from default kitty colorscheme
+window:
+  opacity: 1.0
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1.0"
+
 colors:
 
+  # Default colors
   primary:
-    background: '#101010'
-    foreground: '#dddddd'
+    background: '0x151515'
+    foreground: '0xd0d0d0'
 
+  # Normal colors
   normal:
-    black:   '#101010'
-    red:     '#cc0403'
-    green:   '#19cb00'
-    yellow:  '#cecb00'
-    blue:    '#0d73cc'
-    magenta: '#cb1ed1'
-    cyan:    '#0dcdcd'
-    white:   '#dddddd'
+    black:   '0x151515'
+    red:     '0xac4142'
+    green:   '0x90a959'
+    yellow:  '0xf4bf75'
+    blue:    '0x6a9fb5'
+    magenta: '0xaa759f'
+    cyan:    '0x75b5aa'
+    white:   '0xd0d0d0'
 
+  # Bright colors
   bright:
-    black:   '#626262'
-    red:     '#f2201f'
-    green:   '#23fd00'
-    yellow:  '#fffd00'
-    blue:    '#1a8fff'
-    magenta: '#fd28ff'
-    cyan:    '#14ffff'
-    white:   '#ffffff'
+    black:   '0x505050'
+    red:     '0xac4142'
+    green:   '0x90a959'
+    yellow:  '0xf4bf75'
+    blue:    '0x6a9fb5'
+    magenta: '0xaa759f'
+    cyan:    '0x75b5aa'
+    white:   '0xf5f5f5'
+
