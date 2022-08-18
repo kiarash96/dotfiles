@@ -1,36 +1,38 @@
 #!/bin/sh
+
 #
 # This script backups listed important files
 #
 
 LIST_FILE="watchlist"
+DCONF_LIST_FILE="dconf-watchlist.yml"
 BACKUP_DIR="rootfs"
 PKGS_FILE="packages"
 
 # Backup $1 which is a file.
 backfile() {
-    dir=$(dirname $1)
-    name=$(basename $1)
+  dir=$(dirname $1)
+  name=$(basename $1)
 
-    mkdir -p "$BACKUP_DIR/$dir"
-    cp $1 "$BACKUP_DIR/$dir/$name"
+  mkdir -p "$BACKUP_DIR/$dir"
+  cp $1 "$BACKUP_DIR/$dir/$name"
 }
 
 # Backup $1 which is an item in watchlist.
 backentry() {
-    [ -z "$1" ] && return
-    line=$(echo "$1" | sed "s|~|$HOME|g")
-    list=$(find "$line" -type f 2> /dev/null)
+  [ -z "$1" ] && return
+  line=$(echo "$1" | sed "s|~|$HOME|g")
+  list=$(find "$line" -type f 2> /dev/null)
 
-    if [ -z "$list" ]; then
-        echo "\033[31m[x] $(echo $line | sed "s|$HOME|~|g") \033[0m"
-    else
-        for file in $list
-        do
-            backfile $file
-            echo "\033[32m[🗸]\033[0m $(echo $file | sed "s|$HOME|~|g")"
-        done
-    fi
+  if [ -z "$list" ]; then
+    echo "\033[31m[x] $(echo $line | sed "s|$HOME|~|g") \033[0m"
+  else
+    for file in $list
+    do
+      backfile $file
+      echo "\033[32m[🗸]\033[0m $(echo $file | sed "s|$HOME|~|g")"
+    done
+  fi
 }
 
 cd "$(dirname "$0")"
@@ -39,12 +41,12 @@ rm -rf $BACKUP_DIR
 mkdir -p $BACKUP_DIR
 
 echo "Saving dconf settings... "
-python3 ./backup-dconf.py | doas tee "/etc/dconf/db/local.d/conf" > /dev/null
+./dconf-dump.py <$DCONF_LIST_FILE | doas tee "/etc/dconf/db/local.d/conf" >/dev/null
 echo "Done."
 
 cat $LIST_FILE | sed 's|#.*||g' | grep -Ev '^$' | while read -r line
 do
-    backentry $line
+  backentry $line
 done
 
 echo -n "Saving installed packages... "
@@ -52,3 +54,5 @@ xpkg -m > $PKGS_FILE
 echo "Done."
 
 echo "Finished backup."
+
+# vim: ts=2 sw=2 sts=2 et
