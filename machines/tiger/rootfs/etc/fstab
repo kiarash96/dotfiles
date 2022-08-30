@@ -1,0 +1,7 @@
+/dev/disk/by-uuid/5197786f-c71a-497d-b9ce-51a812c71e9f / btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvolid=256,subvol=/@root/live 0 0
+/dev/disk/by-uuid/5197786f-c71a-497d-b9ce-51a812c71e9f /mnt/btrfs btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvolid=5,subvol=/ 0 0
+/dev/disk/by-uuid/5197786f-c71a-497d-b9ce-51a812c71e9f /home btrfs rw,noatime,compress=zstd:3,ssd,space_cache,subvolid=257,subvol=/@home/live 0 0
+/dev/disk/by-uuid/3814-7B89 /boot/efi vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 2
+tmpfs	/tmp	tmpfs defaults,nosuid,nodev	0	0
+tmpfs	/media	tmpfs	defaults,mode=755	0	0
+/dev/disk/by-uuid/09384f7e-accd-43ec-b004-9aaa86c303db /mnt/data ext4 defaults,rw 0 2

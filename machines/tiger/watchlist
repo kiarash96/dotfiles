@@ -1,0 +1,59 @@
+# Kernel + Boot
+/etc/default/grub
+/etc/dracut.conf.d/
+/etc/modules-load.d/
+/etc/modprobe.d/
+/etc/sysctl.d/
+/etc/fstab
+/etc/crypttab
+/etc/rc.conf
+
+# Network
+/etc/NetworkManager/conf.d/
+/etc/resolvconf.conf
+/etc/resolv.conf
+/etc/dnsmasq.conf
+
+# System wide package configuration
+/etc/environment
+/etc/doas.conf
+/etc/chrony.conf
+/etc/xbps.d/
+
+# System services
+/etc/sv/dnsmasq/run
+
+# Cron jobs
+/etc/cron.daily/
+/etc/cron.weekly/
+
+# System scripts
+/usr/local/bin/doasedit
+
+# User settings
+~/.config/user-dirs.dirs
+~/.config/fontconfig/
+~/.gitconfig
+~/.tmux.conf
+~/.config/alacritty/alacritty.yml
+~/.config/nvim/init.vim
+
+# Fish shell
+~/.config/fish/fish_plugins
+~/.config/fish/functions/fish_prompt.fish
+~/.config/fish/functions/less.fish
+
+# GDM on wayland workaround
+/usr/lib/udev/rules.d/61-gdm.rules
+
+# Udisks
+/usr/lib/udev/rules.d/99-udisks2.rules
+
+# Firefox settings
+/usr/lib/firefox/defaults/pref/local-settings.js
+/usr/lib/firefox/mozilla.cfg
+
+# Local dconf database
+/etc/dconf/profile/user
+/etc/dconf/db/local.d/
+

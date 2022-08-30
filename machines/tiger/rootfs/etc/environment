@@ -1,0 +1,13 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+
+# Firefox
+MOZ_DBUS_REMOTE=1
+MOZ_ENABLE_WAYLAND=1
+
+#winit
+WINIT_UNIX_BACKEND=x11
+

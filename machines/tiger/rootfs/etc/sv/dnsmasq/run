@@ -1,0 +1,8 @@
+#!/bin/sh
+mkdir -p /var/lib/misc
+[ -r ./conf ] && . ./conf
+
+# create an empty resolv.conf file to supress dnsmasq warning
+mkdir -p /run/resolvconf && touch /run/resolvconf/resolv.conf
+
+exec dnsmasq -k ${OPTS:---enable-dbus -u dnsmasq -g dnsmasq} 2>&1

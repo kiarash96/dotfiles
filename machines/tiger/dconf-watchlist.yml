@@ -1,0 +1,154 @@
+org.gnome:
+
+  mutter:
+    - experimental-features
+
+  settings-daemon.plugins:
+
+    color:
+      - night-light-enabled
+      - night-light-temperature
+      - night-light-schedule-automatic
+      - night-light-last-coordinates
+
+    power:
+      - idle-dim
+      - power-button-action
+      - sleep-inactive-ac-timeout
+      - sleep-inactive-ac-type
+      - sleep-inactive-battery-timeout
+      - sleep-inactive-battery-type
+
+    media-keys:
+      - custom-keybindings
+
+    media-keys.custom-keybindings:
+
+      custom-launch-terminal:
+        - binding
+        - command
+        - name
+
+      custom-launch-system-monitor:
+        - binding
+        - command
+        - name
+
+  desktop:
+
+    input-sources:
+      - sources
+      - per-window
+      - xkb-options
+
+    peripherals.mouse:
+      - speed
+
+    session:
+      - idle-delay
+
+    background:
+      - picture-options
+      - picture-uri
+
+    screensaver:
+      - picture-options
+      - picture-uri
+
+    interface:
+      - clock-show-seconds
+      - clock-show-weekday
+      - enable-hot-corners
+      - show-battery-percentage
+      - gtk-enable-primary-paste
+      - gtk-theme
+      - icon-theme
+      - cursor-theme
+      - monospace-font-name
+
+    media-handling:
+      - autorun-never
+
+    privacy:
+      - recent-files-max-age
+      - remove-old-temp-files
+      - remove-old-trash-files
+
+    wm.keybindings:
+      - switch-input-source
+      - switch-input-source-backward
+      - switch-applications
+      - switch-applications-backward
+      - switch-windows
+      - switch-windows-backward
+
+  shell:
+    - favorite-apps
+    - enabled-extensions
+
+  shell.extensions:
+
+    appindicator:
+      - icon-size
+      - tray-pos
+
+    dash-to-panel:
+      - animate-appicon-hover
+      - appicon-margin
+      - appicon-padding
+      - click-action
+      - group-apps
+      - group-apps-underline-unfocused
+      - group-apps-use-fixed-width
+      - hide-overview-on-startup
+      - hotkeys-overlay-combo
+      - isolate-monitors
+      - isolate-workspaces
+      - leftbox-padding
+      - leftbox-size
+      - panel-anchors
+      - panel-element-positions
+      - panel-element-positions-monitors-sync
+      - panel-lengths
+      - panel-positions
+      - panel-sizes
+      - scroll-icon-action
+      - show-appmenu
+      - show-favorites
+      - show-running-apps
+      - show-window-previews
+      - status-icon-padding
+      - tray-padding
+
+    notification-banner-reloaded:
+      - anchor-horizontal
+      - anchor-vertical
+      - animation-time
+      - animation-direction
+
+  tweaks:
+    - show-extensions-notice
+
+  nautilus:
+
+    preferences:
+      - default-folder-viewer
+      - search-filter-time-type
+      - show-create-link
+
+    list-view:
+      - default-zoom-level
+
+org.gnome.Geary:
+    - startup-notifications
+    - display-preview
+
+org.gtk.settings.file-chooser:
+  - sort-directories-first
+
+org.gtk.gtk4.settings.file-chooser:
+  - sort-directories-first
+
+ca.desrt.dconf-editor:
+  - show-warning
+
